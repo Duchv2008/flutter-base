@@ -19,7 +19,7 @@ extension EnvironmentExt on Environment {
   String get baseUrl {
     switch (this) {
       case Environment.dev:
-        return "https://api.themoviedb.org";
+        return "http://ec2-3-115-5-1.ap-northeast-1.compute.amazonaws.com/";
       case Environment.stg:
         return "https://api.themoviedb.org";
       case Environment.prod:

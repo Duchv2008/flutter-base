@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base/blocs/app_cubit.dart';
 import 'package:flutter_base/common/app_images.dart';
@@ -51,8 +52,10 @@ class _SignInChildPageState extends State<SignInChildPage> {
   @override
   void initState() {
     super.initState();
-    usernameTextController = TextEditingController(text: 'mobile@newwave.com');
-    passwordTextController = TextEditingController(text: "mobile");
+    usernameTextController =
+        TextEditingController(text: kDebugMode ? "duchv2" : null);
+    passwordTextController =
+        TextEditingController(text: kDebugMode ? "Aa@123123" : null);
     obscurePasswordController = ObscureTextController(obscureText: true);
     _cubit = BlocProvider.of<SignInCubit>(context);
     _cubit.changeUsername(username: usernameTextController.text);

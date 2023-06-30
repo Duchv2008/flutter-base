@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base/utils/utils.dart';
 
 import 'app_label_text_field.dart';
 
@@ -23,12 +22,12 @@ class AppEmailInput extends AppLabelTextField {
           highlightText: highlightText ?? "*",
           textInputType: TextInputType.emailAddress,
           enabled: enabled,
-          validator: (text) {
-            if (Utils.isEmail(text ?? "") || (text ?? "").isEmpty) {
-              return "";
-            } else {
-              return "Email invalid";
-            }
-          },
+          // validator: (text) {
+          //   if (Utils.isEmail(text ?? "") || (text ?? "").isEmpty) {
+          //     return "";
+          //   } else {
+          //     return "Email invalid";
+          //   }
+          // },
         );
 }

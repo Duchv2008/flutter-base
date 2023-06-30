@@ -122,3 +122,4 @@ app.*.symbols
 lib/generated
 .flutter-plugins-dependencies
 
+.fvm/flutter_sdk
